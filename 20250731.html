@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>石川県立図書館の図書館業務紹介</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .presentation-container {
+            max-width: 900px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .slide {
+            display: none;
+            padding: 60px 50px;
+            text-align: center;
+            min-height: 600px;
+            position: relative;
+            animation: slideIn 0.5s ease-in-out;
+        }
+        
+        .slide.active {
+            display: block;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .slide h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .slide h2 {
+            color: #34495e;
+            font-size: 2em;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        
+        .slide h3 {
+            color: #2980b9;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+        
+        .slide p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .service-item {
+            background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .navigation {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .nav-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+        
+        .nav-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+        }
+        
+        .nav-btn:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .slide-counter {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background: rgba(52, 152, 219, 0.1);
+            padding: 8px 15px;
+            border-radius: 20px;
+            color: #2980b9;
+            font-weight: bold;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #3498db;
+        }
+        
+        ul {
+            text-align: left;
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin: 10px 0;
+            font-size: 1.1em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="slide-counter">
+            <span id="current-slide">1</span> / <span id="total-slides">6</span>
+        </div>
+        
+        <!-- スライド1: タイトル -->
+        <div class="slide active">
+            <div class="icon">📚</div>
+            <h1>石川県立図書館の</h1><h1>図書館業務紹介</h1>
+            <div class="highlight">
+                <p>めくりめぐる知と未来。思いもよらない本との出会いや体験を通して人が成長し、可能性が重なり広がる場所を目指しています。</p><p>「ひとり」から石川へ。世界へ。未来へ。</p>
+            </div>
+        </div>
+        
+        <!-- スライド2: BOOK -->
+        <div class="slide">
+            <h2>📖 BOOK</h2>
+             <p>12テーマをめぐることで、皆さんのニーズに応える一冊に出会えるはずです。その日の気分から、ウィンドウショッピングのように本との出会いを楽しむことができます。</p>
+             <br>
+            <div class="highlight">
+                <p>1．子供を育てる２．仕事を考える3．暮らしを広げる4．文学にふれる5．自分を表現する6．身体を動かす7．好奇心を抱く8．世界に飛び出す9．日本を知る10．生き方に学ぶ11．本の歴史を巡る12．里の恵み・文化の香り～石川コレクション～</p>
+            </div>
+  
+            </div>
+            
+           
+        
+        <!-- スライド3: エリア紹介 -->
+        <div class="slide">
+            <h2>👥 エリア紹介 </h2>
+            <div class="highlight">
+            <h3>閲覧エリア</h3>
+                <p>本棚から直接手に取って見ることができる本は、合計で約30万札となっています。うちの約7万冊は円形閲覧空間の本棚にあり、身近でなじみ深い、当館独自の「本と出会う12のテーマ」を設定し、まちの書店のように、関連する本をまとめて並べています。「調べものデスク」に行くと、司書に気軽に相談ができる、レファレンスサービスが受けられます。</p>
+                </div>
+                
+               
+            </div>
+        </div>
+         <!-- スライド3: BOOK -->
+        <div class="slide">
+         <div class="highlight">
+            <h3>文化交流エリア</h3>
+               <p>様々な体験ができるスペースが集まっており、飲食が自由となっています。1階の「屋内広場」のすぐ右手には約140席を有する「だんだん広場」があり、プロジェクターやスクリーン、音響設備も備え、間仕切りをすれば、講演会やミニコンサート、映画の上映などが行われます。</p>
+                </div>
+                <br>
+                 <div class="highlight">
+            <h3>ものづくり体験スペース</h3>
+               <p>本から得た知識を、実際のモノに落とし込むことができる。3Dプリンター、ミシン、レーザーカッターなど様々なモノづくりの機械があります。</p>
+                </div>
+           
+  
+            </div>
+           
+        </div>
+        
+        <!-- スライド4: 企画・教育事業 -->
+        <div class="slide">
+            <h2>🎯 イベント・企画展示</h2>
+            <div class="highlight">
+                <h3>ピックアップイベント</h3>
+                <ul>
+                    <li><strong>上映会：</strong>2023年に米アニー賞と米エミー賞のダブル受賞を果たした『ONI ~ 神々山のおなり』を上映します！</li>
+                    <li><strong>英語かるたで遊ぶ：</strong>英語かるたを使ってゲームをします。たくさん英語に触れてみましょう！</li>
+                    <li><strong>トークイベント「のとじま水族館全面再開－あの日から今日まで、そしてこれから」：</strong>震災後の水族館の歩み、そしてこれから予定している試みにつきまして、水族館の職員に伺います。</li>
+                    
+                </ul>
+            </div>
+            <br>
+            <p>地域のニーズに応じた多様な企画を通じて、図書館を身近に感じてもらい、生涯学習の拠点としての役割を果たしています。</p>
+        </div>
+        
+        <!-- スライド5: 運営・管理業務 -->
+        <div class="slide">
+            <h2>⚙️ 運営・管理業務</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3>施設・設備管理</h3>
+                    <p>図書館施設の維持管理、セキュリティ管理、あらゆる人が利用することを想定し、利用者が快適に過ごせる環境・空間を提供します。</p>
+                </div>
+                <div class="service-item">
+                    <h3>運営</h3>
+                    <p>職員研修の企画・実施、他図書館との連携・協力ボランティア活動なども行っています。図書館をより身近なものに、様々な体験ができる場所にしています。</p>
+                </div>
+            </div>
+           
+        </div>
+        
+        <!-- スライド6: まとめ -->
+        <div class="slide">
+            <h2>🌟 図書館の役割</h2>
+            <div class="highlight">
+                <p>図書館は「知識の宝庫」として、資料の収集・整理・提供から利用者サービス、教育・文化事業まで幅広い業務を展開しています。デジタル化が進む現代においても、人と情報をつなぐ重要な役割を担い続けています。</p>
+            </div>
+            <p>地域コミュニティの学習拠点として、すべての人々の知的欲求と学習ニーズに応え、豊かな文化と知識の継承・発展に貢献します。利用者の方々と、より良い図書館サービスの実現を目指しています。</p>
+            <div class="icon" style="margin-top: 40px;">🤝</div>
+        </div>
+        <!-- スライド6: まとめ -->
+        <div class="slide">
+            <h2>📖参考文献</h2>
+            <div class="highlight">
+            <p>石川県立図書館</p>
+               <a href="https://www.mext.go.jp/a_menu/01_l/08052911/1234567.htm" target="_blank">https://www.library.pref.ishikawa.lg.jp/</a>
+                <br>
+                <p>this is図書館</p>
+               <a href="https://www.mext.go.jp/a_menu/01_l/08052911/1234567.htm" target="_blank">https://www.library.pref.ishikawa.lg.jp/special/</a>
+            </div>
+            </div>
+        </div>
+        
+       
+        
+        <div class="navigation">
+            <button class="nav-btn" id="prev-btn" onclick="previousSlide()">前へ</button>
+            <button class="nav-btn" id="next-btn" onclick="nextSlide()">次へ</button>
+        </div>
+    </div>
+    
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        document.getElementById('total-slides').textContent = totalSlides;
+        
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[n].classList.add('active');
+            
+            document.getElementById('current-slide').textContent = n + 1;
+            document.getElementById('prev-btn').disabled = n === 0;
+            document.getElementById('next-btn').disabled = n === totalSlides - 1;
+        }
+        
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        }
+        
+        function previousSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        }
+        
+        // キーボードナビゲーション
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') previousSlide();
+        });
+        
+        // 初期設定
+        showSlide(0);
+    </script>
+</body>
+</html>
